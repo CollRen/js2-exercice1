@@ -38,11 +38,37 @@ var monEspaceNoms = monEspaceNoms || {};
     }
 
     //Constructeur
-    let Produit = function (titre, sujet, prix, rabais, editeur) {
-        this.titre = titre;
-        this.sujet = sujet;
-        this.prix = prix;
-        this.rabais = rabais;
-        this.editeur = editeur;
+    let Produit = function (el) {
+        this.el = el;
+        let str = this.el.currentTarget.dataset.jsProduit.split("|");
+        let categorie = str[0];
+        let index = str[1];
+
+        if(categorie === 'livres') {
+            let titre = produits.livres[index].titre;
+            let sujet = produits.livres[index].sujet;
+            let prix = produits.livres[index].prix;
+            let rabais = produits.livres[index].rabais;
+            let editeur = produits.livres[index].editeur;
+           let auteur = produits.livres[index].auteur;
+           console.log(auteur);
+        };
+
+/*         this.titre = this.el.titre;
+        this.sujet = this.el.sujet;
+        this.prix = this.el.prix;
+        this.rabais = this.el.rabais; */
     };
+
+    Produit.prototype = {
+        setRabais: function (rabais) {
+            this.rabais = rabais;
+        },
+        setPrix: function (prix) {
+            this.prix = prix;
+        },
+        calculRabais
+    };
+    monEspaceNoms.Produit = Produit;
+
 })(monEspaceNoms);
