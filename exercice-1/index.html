@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr_CA">
+
+<head>
+	<!-- meta -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Exercice 1 | JavaScript Module Pattern</title>
+	<meta name="description"
+		content="Exercice 1 sur le JavaScript Module Pattern du cours 582-31F-MA Programmation d'interface Web 2">
+
+	<!-- styles -->
+	<link rel="stylesheet" type="text/css" href="./assets/styles/styles.css">
+
+	<!-- scripts -->
+	<script src="./assets/scripts/produits.js"></script>
+	<script src="./assets/scripts/Jeu.js"></script>
+	<script src="./assets/scripts/Livre.js"></script>
+	<script src="./assets/scripts/Produit.js"></script>
+	<script src="./assets/scripts/main.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<h1>Exercice 1 - JavaScript Module Pattern <small>(sommatif)</small></h1>
+	</header>
+	<main>
+
+		<!-- Section littérature jeunesse en vedette -->
+		<section>
+			<h2>Littérature jeunesse en vedette</h2>
+			<div class="grille grille--3">
+				<article class="produit" data-js-produit="livres|0">
+					<img src="./assets/img/livres/jai-faim.jpeg" alt="J'ai faim">
+					<div class="produit__detail produit__detail--ferme" data-js-produit-detail></div>
+				</article>
+
+				<article class="produit" data-js-produit="livres|1">
+					<img src="./assets/img/livres/bonsoir-petit-renard.jpeg" alt="Bonsoir petit renard">
+					<div class="produit__detail produit__detail--ferme" data-js-produit-detail></div>
+				</article>
+
+				<article class="produit" data-js-produit="livres|2">
+					<img src="./assets/img/livres/si-jetais-un-crabe.jpeg" alt="Si j'étais un crabe">
+					<div class="produit__detail produit__detail--ferme" data-js-produit-detail></div>
+				</article>
+			</div>
+		</section>
+
+		<!-- Section jeux en vedette -->
+		<section>
+			<h2>Jeux en vedette</h2>
+			<div class="grille grille--3">
+				<article class="produit" data-js-produit="jeux|0">
+					<img src="./assets/img/jeux/catan.jpeg" alt="Catan">
+					<div class="produit__detail produit__detail--ferme" data-js-produit-detail></div>
+				</article>
+
+				<article class="produit" data-js-produit="jeux|1">
+					<img src="./assets/img/jeux/exploding-kittens.jpg" alt="Exploding kittens">
+					<div class="produit__detail produit__detail--ferme" data-js-produit-detail></div>
+				</article>
+
+				<article class="produit" data-js-produit="jeux|2">
+					<img src="./assets/img/jeux/une-patate-a-velo-le-jeu.jpeg" alt="Une patate à vélo le jeu">
+					<div class="produit__detail produit__detail--ferme" data-js-produit-detail></div>
+				</article>
+			</div>
+		</section>
+
+	</main>
+</body>
+
+</html>
