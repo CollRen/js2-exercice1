@@ -13,10 +13,11 @@ l’objet correspondant en passant en argument l’élément courant. */
     
 
     for (let i = 0, l = elsProduit.length; i < l; i++) {
-        console.log(elsProduit[i]);
         elsProduit[i].addEventListener('click', function(el){
-            new Produit(el);
+            new Livre(el);
         });
+
+
        /*  else if (categorie === 'jeux') {
             console.log(`Jeux ${index}:`, categorie );
         } */

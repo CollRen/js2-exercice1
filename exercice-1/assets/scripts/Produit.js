@@ -45,13 +45,12 @@ var monEspaceNoms = monEspaceNoms || {};
         let index = str[1];
 
         if(categorie === 'livres') {
-            let titre = produits.livres[index].titre;
-            let sujet = produits.livres[index].sujet;
-            let prix = produits.livres[index].prix;
-            let rabais = produits.livres[index].rabais;
-            let editeur = produits.livres[index].editeur;
-           let auteur = produits.livres[index].auteur;
-           console.log(auteur);
+            this.titre = produits.livres[index].titre;
+            this.sujet = produits.livres[index].sujet;
+            this.prix = produits.livres[index].prix;
+            this.rabais = produits.livres[index].rabais;
+            this.editeur = produits.livres[index].editeur;
+           this.auteur = produits.livres[index].auteur;
         };
 
 /*         this.titre = this.el.titre;
