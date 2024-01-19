@@ -14,7 +14,8 @@ l’objet correspondant en passant en argument l’élément courant. */
 
     for (let i = 0, l = elsProduit.length; i < l; i++) {
         elsProduit[i].addEventListener('click', function(el){
-            new Livre(el);
+            elCurrTarget = el.currentTarget;
+            new Livre(elCurrTarget);
         });
 
 

@@ -40,7 +40,7 @@ var monEspaceNoms = monEspaceNoms || {};
     //Constructeur
     let Produit = function (el) {
         this.el = el;
-        let str = this.el.currentTarget.dataset.jsProduit.split("|");
+        let str = this.el.dataset.jsProduit.split("|");
         let categorie = str[0];
         let index = str[1];
 
@@ -51,6 +51,9 @@ var monEspaceNoms = monEspaceNoms || {};
             this.rabais = produits.livres[index].rabais;
             this.editeur = produits.livres[index].editeur;
            this.auteur = produits.livres[index].auteur;
+           this.pages = produits.livres[index].pages;
+           console.log(this.auteur);
+           console.log(this.titre);
         };
 
 /*         this.titre = this.el.titre;
