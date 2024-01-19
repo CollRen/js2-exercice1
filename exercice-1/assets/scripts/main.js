@@ -5,10 +5,14 @@
     let elsProduit = document.querySelectorAll("[data-js-produit]");
 
     for (let i = 0, l = elsProduit.length; i < l; i++) {
-        elsProduit[i].addEventListener('click', function(el){
-            elCurrTarget = el.currentTarget;
-            new Livre(elCurrTarget);
-        });
+        let str = elsProduit[i].dataset.jsProduit.split("|");
+        let categorie = str[0];
+        let index = str[1];
+        if(categorie === 'livres') {
+            new Livre(elsProduit[i]);
+        /* } else {
+            new Jeu(elsProduit[i]); */
+        };
     };
 })(monEspaceNoms);
 
