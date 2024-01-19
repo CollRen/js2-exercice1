@@ -2,8 +2,6 @@ var monEspaceNoms = monEspaceNoms || {};
 (function (monEspaceNoms) {
     let Produit = monEspaceNoms.Produit;
 
-        
-
     let Livre = function(el) {
         this.el = el;
         Produit.call(this, this.el);
@@ -20,6 +18,6 @@ var monEspaceNoms = monEspaceNoms || {};
             Produit.prototype.injection(this.el, html);
     };
 
-Livre.prototype = Object.create(Produit.prototype);
-monEspaceNoms.Livre = Livre;
+    Livre.prototype = Object.create(Produit.prototype);
+    monEspaceNoms.Livre = Livre;
 })(monEspaceNoms);
