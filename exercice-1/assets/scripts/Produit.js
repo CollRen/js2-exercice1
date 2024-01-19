@@ -37,6 +37,14 @@ var monEspaceNoms = monEspaceNoms || {};
         return (this.prix * this.rabais) / 100; // On retourne this.prix!?
     }
 
+    function injection(el, html) {
+        console.log(el);
+        const elHtml = el.querySelector("[data-js-produit-detail]");
+        elHtml.innerHTML = html;
+        elHtml.classList.toggle("produit__detail--ferme");
+        elHtml.classList.toggle("produit__detail--ouvert");
+    };
+
     //Constructeur
     let Produit = function (el) {
         this.el = el;
@@ -69,8 +77,8 @@ var monEspaceNoms = monEspaceNoms || {};
         setPrix: function (prix) {
             this.prix = prix;
         },
-        calculRabais
+        calculRabais: calculRabais,
+        injection: injection
     };
     monEspaceNoms.Produit = Produit;
-
 })(monEspaceNoms);
