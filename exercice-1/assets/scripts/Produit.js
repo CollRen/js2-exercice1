@@ -16,6 +16,7 @@ var monEspaceNoms = monEspaceNoms || {};
         let str = this.el.dataset.jsProduit.split("|");
         let categorie = str[0];
         let index = str[1];
+        this.html = '';
 
         if(categorie === 'livres') {
             this.titre = produits.livres[index].titre;  // Ici j'aurais aimé produits.`${categorie}`[index].titre;
@@ -37,6 +38,10 @@ var monEspaceNoms = monEspaceNoms || {};
             if (this.rabais) {
                 this.prix = calculRabais(this.prix, this.rabais);}
         };
+        this.html = `
+        <p><small>Titre : </small>${this.titre}</p>
+        <p><small>Sujet : </small>${this.sujet}</p>
+        <p><small>Prix : </small>${this.prix} $${this.rabais ? '&nbsp<small> (&nbsp'+this.rabais+'%&nbsp)</small>' : ''}</p>`;
     };
 
     Produit.prototype = {
