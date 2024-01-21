@@ -1,0 +1,93 @@
+/* GENERIC */
+
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* ELEMENTS */
+
+body {
+    margin: 0;
+    padding: 8vw;
+}
+
+main,
+section + section {
+    margin-top: 50px;
+}
+
+
+h1,
+h2,
+p {
+    letter-spacing: 0.03em;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+h2 + div {
+    margin-top: 30px;
+}
+
+p + p {
+    margin-top: 6px;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* COMPONENTS */
+
+/* Grille */
+
+.grille {
+    display: grid;
+}
+
+.grille--3 {
+    grid-gap: 3vw;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* Produit */
+
+.produit {
+    cursor: pointer;
+    position: relative;
+}
+
+.produit__detail {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .92), rgba(255, 255, 255, 1) 50%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;      /* ref : https://getcssscan.com/css-box-shadow-examples */
+    font-size: .95em;
+    font-weight: 300;
+    left: 0;
+    padding: 8% 4%;
+    pointer-events: none;
+    position: absolute;
+    top: 60%;
+    transition: opacity .3s ease,
+                transform .3s ease;
+    width: 100%;
+    z-index: 1;
+}
+
+.produit__detail--ferme {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.produit__detail--ouvert {
+    opacity: 1;
+    transform: translateY(0);
+}
